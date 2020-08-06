@@ -8,7 +8,6 @@
       </div>
     </main>
 
-
   </div>
 </template>
 
