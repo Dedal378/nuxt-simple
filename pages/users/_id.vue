@@ -12,13 +12,13 @@
 
 <script>
   export default {
-    validate({params}) {
+    validate ({ params }) {
       return /^\d+$/.test(params.id)
     },
-    async asyncData({params, error, store}) {
+    async asyncData ({ params, error, store }) {
       try {
         const user = await store.dispatch('users/fetchUserByID', params.id)
-        return{user}
+        return { user }
       } catch (e) {
         error(e)
       }

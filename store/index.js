@@ -1,24 +1,22 @@
+export const state = () => ( { token: null } );
+
 export const actions = {
-  login({commit}) {
+  login ({ commit }) {
     commit('setToken', 'true')
   },
-  logout({commit}) {
+  logout ({ commit }) {
     commit('clearToken')
   },
-  async nuxtServerInit({dispatch}) {
+  async nuxtServerInit ({ dispatch }) {
     await dispatch('users/fetchUsers')
   }
 };
 
-export const state = () => ({
-  token: null
-});
-
 export const mutations = {
-  setToken(state, token) {
+  setToken (state, token) {
     state.token = token
   },
-  clearToken(state) {
+  clearToken (state) {
     state.token = null
   }
 };

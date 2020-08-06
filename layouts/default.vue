@@ -2,6 +2,7 @@
   <div>
 
     <Navbar />
+
     <main>
       <div class="container">
         <nuxt />

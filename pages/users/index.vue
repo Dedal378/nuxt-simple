@@ -17,36 +17,36 @@
 <script>
   export default {
     name: "Users",
+    // загрузка асинхронных данных: два способа:
 
-    // async asyncData({store, error}) {
-    //   try {
-    //     await store.dispatch('users/fetchUsers')
-    //     return {}
-    //   } catch (e) {
-    //     error (e)
-    //   }
-    // },
-    // async fetch({store, error}) {
-    //   try {
-    //     if (store.getters['users/users'].length === 0) {
-    //       await store.dispatch('users/fetchUsers')
-    //     }
-    //   } catch (e) {
-    //     error(e)
-    //   }
-    // },
-    data() {
-      return {
-        pageTitle: 'Users page'
+  /*  async asyncData ({ store, error }) {
+      try {
+        await store.dispatch('users/fetchUsers')
+        return {}
+      } catch (e) {
+        error(e)
       }
+    },*/
+
+    async fetch ({ store, error }) {
+      try {
+        if (store.getters['users/users'].length === 0) {
+          await store.dispatch('users/fetchUsers')
+        }
+      } catch (e) {
+        error(e)
+      }
+    },
+    data () {
+      return { pageTitle: 'Users page' }
     },
     computed: {
-      users() {
+      users () {
         return this.$store.getters['users/users']
-      }
+      },
     },
     methods: {
-      goTo(user) {
+      goTo (user) {
         this.$router.push('/users/' + user.id)
       },
     }
