@@ -2,7 +2,7 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <nuxt-link class="navbar-brand" to="#">NUXT SSR</nuxt-link>
+      <nuxt-link class="navbar-brand" to="#">NUXT JS</nuxt-link>
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">

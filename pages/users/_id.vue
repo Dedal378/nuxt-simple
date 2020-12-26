@@ -20,12 +20,7 @@ export default {
     } catch (e) {
       error(e)
     }
-  },
-  // methods: {
-  //   user ({ params }) {
-  //     return this.$store.getters[`users/usersId`]
-  //   }
-  // }
+  }
 }
 </script>
 
