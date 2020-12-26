@@ -8,21 +8,19 @@
 </template>
 
 <script>
-  export default {
-    name: "error"
-  }
+export default {
+  name: "error"
+}
 </script>
 
 <style scoped>
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  h1 {
-    color: red;
-  }
-
+h1 {
+  color: red;
+}
 </style>

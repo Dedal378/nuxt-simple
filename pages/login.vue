@@ -1,40 +1,43 @@
 <template>
+  <section>
 
-  <form @submit.prevent="onSubmit">
-    <h1>Login</h1>
-
-    <div class="form-group">
-      <input type="text" class="form-control">
+    <div v-if="$route.query.message" class="alert alert-danger mb-3">
+      Need login first
     </div>
 
-    <div class="form-group">
-      <input type="password" class="form-control">
-    </div>
+    <form @submit.prevent="onSubmit">
+      <h1>Login</h1>
 
-    <p>
-      <nuxt-link to="/">Home</nuxt-link>
-    </p>
+      <div class="form-group">
+        <input class="form-control" type="text">
+      </div>
 
-    <button class="btn btn-primary" type="submit">Login</button>
-  </form>
+      <div class="form-group">
+        <input class="form-control" type="password">
+      </div>
 
+      <p><nuxt-link to="/">Home</nuxt-link></p>
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+
+  </section>
 </template>
 
 <script>
-  export default {
-    name: "login",
-    layout: 'empty',
-    methods: {
-      onSubmit() {
-        this.$store.dispatch('login')
-        this.$router.push('/')
-      }
+export default {
+  name: 'login',
+  layout: 'empty',
+  methods: {
+    onSubmit () {
+      this.$store.dispatch('login')
+      this.$router.push('/')
     }
   }
+}
 </script>
 
 <style scoped>
-  form {
-    width: 600px;
-  }
+form {
+  width: 600px;
+}
 </style>

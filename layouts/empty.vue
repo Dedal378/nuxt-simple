@@ -7,16 +7,16 @@
 </template>
 
 <script>
-  export default {
-    name: "empty",
-  }
+export default {
+  name: "empty",
+}
 </script>
 
 <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5rem;
-  }
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
 </style>
